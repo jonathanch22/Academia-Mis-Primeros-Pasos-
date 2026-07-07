@@ -1,0 +1,580 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Mis Primeros Pasos | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+   <header class="main-header">
+    <div class="header-top">
+        
+        <!-- LOGO CLIQUEABLE -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logopri.png" alt="Logo Academia" class="logo-img" width="200"> 
+            </a>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Agendamiento</a></li>
+                <li><a href="https://wa.me/50764054583" target="_blank">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar en el sitio..." autocomplete="off">
+            <button id="searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+  
+     <div class="nav-user-container">
+    <a href="#" id="btnMiCuentaTrigger" class="btn-mi-cuenta">
+        <i class="fa-solid fa-circle-user"></i> <span>Mi Cuenta</span>
+    </a>
+
+    <div id="dropdownMiniMenu" class="mini-menu-doit">
+        <div class="mini-menu-header">
+            <div class="user-avatar-mini">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div class="user-info-mini">
+                <span class="greeting-text">¡Hola!</span>
+                <strong id="displayNombreUsuario" class="user-name-display">Usuario</strong>
+            </div>
+        </div>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="cuenta.html" class="mini-menu-link">
+                    <i class="fa-regular fa-id-card"></i> Mi Cuenta
+                </a>
+            </li>
+           
+        </ul>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="#" id="btnCerrarSesion" class="mini-menu-link link-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    </header>
+
+    <!-- ==================== MODALES ==================== -->
+    <div id="modalLogin" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+            <form id="formLogin">
+                <div class="form-group">
+                    <label>Correo electrónico<span class="req">*</span></label>
+                    <input type="email"  id="emailInput" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña<span class="req">*</span></label>
+                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn-submit-rojo">INICIAR SESIÓN</button>
+            </form>
+
+            <div class="form-footer-link">
+                ¿No tienes una cuenta? <a id="linkIrARegistro">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRegistro" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+           <form id="formRegistro">
+    <div class="form-row-2col">
+        <div class="form-group">
+            <label>Nombre<span class="req">*</span></label>
+            <input type="text" id="inputRegNombre" class="form-control" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+            <label>Apellido<span class="req">*</span></label>
+            <input type="text" id="inputRegApellido" class="form-control" placeholder="Apellido" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Correo electrónico<span class="req">*</span></label>
+        <input type="email" id="emailRegInput" class="form-control" placeholder="Correo electrónico" required>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña<span class="req">*</span></label>
+        <input type="password" id="inputRegPassword" class="form-control" placeholder="Contraseña" required>
+    </div>
+
+    <div class="form-info-text">
+        ℹ️ <strong>Información:</strong> La contraseña debe ser de al menos 8 caracteres e incluir letras, números y caracteres especiales.
+    </div>
+
+    <button type="submit" class="btn-submit-rojo">REGISTRARSE</button>
+</form>
+
+            <div class="form-footer-link">
+                ¿Tienes una cuenta? <a id="linkIrALogin">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="programa-detalle">
+        <div class="container">
+            <h1 class="titulo-principal">Kínder: Sembrando el futuro con bases firmes</h1>
+            <p class="subtitulo">El puente perfecto hacia la educación primaria</p>
+
+            <div class="descripcion-larga">
+                <p>Nuestro programa de Kínder es el puente perfecto hacia la vida escolar primaria. Nos enfocamos en consolidar el desarrollo integral del niño, fortaleciendo la lectoescritura emergente, el razonamiento lógico-matemático y la inteligencia emocional.</p>
+                
+                <p>En esta etapa, el aprendizaje se vuelve más intencionado, pero mantiene la alegría y la creatividad que nos caracteriza. Formamos niños seguros, capaces de trabajar en equipo, resolver problemas y expresar sus ideas con claridad, asegurando que su transición a la educación primaria sea una experiencia exitosa y motivadora.</p>
+            </div>
+
+           <img src="k.JPG" alt="Entorno Educativo" class="img-pequena"> 
+
+            <!-- Formulario -->
+                        <!-- Formulario -->
+            <div class="formulario-solicitud">
+                <h2>Inicia el proceso de inscripción y asegura su lugar en Kínder</h2>
+
+                <form id="formKinder" onsubmit="event.preventDefault(); enviarFormularioKinder();">
+                    
+                    <h3>1. Identificación del Menor</h3>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nombre completo del niño/a *</label>
+                            <input type="text" id="nombreNino" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha de nacimiento *</label>
+                            <input type="date" id="fechaNacimiento" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Tipo de documento *</label>
+                            <select id="tipoDocumento" required>
+                                <option value="">Seleccione...</option>
+                                <option value="cedula">Cédula Juvenil</option>
+                                <option value="pasaporte">Pasaporte</option>
+                                <option value="partida">Partida de Nacimiento</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Número de documento *</label>
+                            <input type="text" id="numDocumento" required>
+                        </div>
+                    </div>
+
+                    <h3>2. Ubicación y Datos de Contacto</h3>
+                    <div class="form-group">
+                        <label>Dirección física (¿Dónde reside el niño/a?) *</label>
+                        <input type="text" id="direccion" required>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Nombre del padre/madre o representante *</label>
+                            <input type="text" id="nombreRepresentante" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono principal (WhatsApp) *</label>
+                            <input type="tel" id="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo electrónico *</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+
+                    <h3>3. Interés en el Programa</h3>
+                    <div class="form-group">
+                        <label>¿Le gustaría agendar una visita guiada a nuestras instalaciones?</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="visita" value="si"> Sí</label>
+                            <label><input type="radio" name="visita" value="no"> No</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>¿Cómo se enteró de nosotros?</label>
+                        <select id="comoSeEntero">
+                            <option value="">Seleccione...</option>
+                            <option value="Redes">Redes sociales</option>
+                            <option value="Recomendacion">Recomendación</option>
+                            <option value="Google">Google</option>
+                            <option value="Otros">Otros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="aceptoRequisitos" required>
+                            Al marcar esta casilla, acepto solicitar la lista detallada de requisitos para la inscripción al programa de Kínder y autorizo el contacto por parte del centro.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+                </form>
+
+                <!-- Mensaje de éxito -->
+                <div id="mensajeExito" class="mensaje-exito" style="display: none;">
+                    <h3>¡Formulario enviado correctamente!</h3>
+                    <p>Gracias por tu interés en nuestro programa Kínder. Pronto nos pondremos en contacto contigo para enviarte la lista de requisitos.</p>
+                </div>
+            </div>
+    </section>
+
+<footer class="main-footer">
+   <div class="social-icons">
+    <a href="https://www.instagram.com/academiamisprimerospasos/" class="ig" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1H9iDYqST6/" class="fb" target="_blank">
+        <i class="fa-brands fa-facebook"></i> 
+    </a>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=academiamisprimerospasos@gmail.com
+    " class="mail">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    </div>
+        <p>&copy; 2026 Academia Mis Primeros Pasos. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- ==================== SCRIPTS UNIFICADOS Y LIMPIOS ==================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // 1. GESTIÓN DE CUENTA Y MODALES
+        const btnMiCuenta = document.getElementById("btnMiCuentaTrigger");
+        const dropdownMenu = document.getElementById("dropdownMiniMenu");
+        const modalLogin = document.getElementById("modalLogin");
+        const modalRegistro = document.getElementById("modalRegistro");
+        const linkIrARegistro = document.getElementById("linkIrARegistro");
+        const linkIrALogin = document.getElementById("linkIrALogin");
+        const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+        const displayNombre = document.getElementById("displayNombreUsuario");
+        const closeButtons = document.querySelectorAll(".modal-close");
+
+        function abrirFlujoCuenta(e) {
+            if (e) e.preventDefault();
+            const estaLogueado = localStorage.getItem("sesionActiva") === "true";
+            const nombreUsuario = localStorage.getItem("nombreUsuario");
+
+            if (estaLogueado && nombreUsuario) {
+                if (displayNombre) displayNombre.textContent = nombreUsuario;
+                dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+                modalLogin.style.display = "none";
+            } else {
+                modalLogin.style.display = "flex";
+                dropdownMenu.style.display = "none";
+            }
+        }
+
+        if (btnMiCuenta) {
+            btnMiCuenta.addEventListener("click", abrirFlujoCuenta);
+            console.log("✅ Botón Mi Cuenta configurado correctamente");
+        }
+
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener("click", function(e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                localStorage.removeItem("nombreUsuario");
+                dropdownMenu.style.display = "none";
+                location.reload();
+            });
+        }
+
+        if (linkIrARegistro) {
+            linkIrARegistro.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "flex";
+            });
+        }
+        if (linkIrALogin) {
+            linkIrALogin.addEventListener("click", () => {
+                modalRegistro.style.display = "none";
+                modalLogin.style.display = "flex";
+            });
+        }
+
+        closeButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "none";
+            });
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === modalLogin) modalLogin.style.display = "none";
+            if (e.target === modalRegistro) modalRegistro.style.display = "none";
+            if (!e.target.closest(".nav-user-container") && dropdownMenu) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+
+        window.procesarLogin = function() {
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", "Usuario"); 
+            modalLogin.style.display = "none";
+            location.reload();
+        };
+
+        window.procesarRegistro = function() {
+            const nombre = document.getElementById("inputRegNombre").value || "Usuario";
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", nombre);
+            modalRegistro.style.display = "none";
+            location.reload();
+        };
+
+        // 2. BARRA DE BÚSQUEDA
+        const searchInput = document.getElementById("searchInput");
+        const searchButton = document.getElementById("searchButton");
+
+        function realizarBusqueda() {
+            let termino = searchInput.value.trim().toLowerCase();
+            if (!termino) {
+                alert("Por favor escribe algo para buscar");
+                return;
+            }
+            if (termino.includes("maternal")) {
+                window.location.href = "maternal.html";
+            } else if (termino.includes("pre-kinder") || termino.includes("prekinder") || termino.includes("pre kinder")) {
+                window.location.href = "prekinder.html";
+            } else if (termino.includes("kinder") || termino.includes("kínder")) {
+                window.location.href = "kinder.html";
+            } else {
+                alert("No encontramos resultados para: " + termino + "\n\nPrueba con: maternal, prekinder o kinder");
+            }
+        }
+
+        if (searchInput && searchButton) {
+            searchInput.addEventListener("keypress", function(e) {
+                if (e.key === "Enter") realizarBusqueda();
+            });
+            searchButton.addEventListener("click", realizarBusqueda);
+        }
+
+        // 3. CONEXIÓN A SUPABASE (KÍNDER) - CORREGIDO
+        const supabaseUrl = 'https://kkedvilrxqqwtaqaxlgw.supabase.co';
+        const supabaseAnonKey = 'sb_publishable_umIPUKcCOtfXQHxAlP7YCw_ffot99AJ';
+        
+        // AQUÍ ESTABA EL ERROR: debe ser "supabase" con minúscula
+        const supabaseClient = supabase.createClient(supabaseUrl, supabaseAnonKey);
+
+        window.enviarFormularioKinder = async function() {
+            const datos = {
+                nombre_completo_nino: document.getElementById('nombreNino').value,
+                fecha_nacimiento: document.getElementById('fechaNacimiento').value,
+                tipo_documento: document.getElementById('tipoDocumento').value,
+                numero_documento: document.getElementById('numDocumento').value,
+                condicion_medica: "",
+                direccion_fisica: document.getElementById('direccion').value,
+                nombre_padre: document.getElementById('nombreRepresentante').value,
+                telefono_padre: document.getElementById('telefono').value,
+                correo_padre: document.getElementById('email').value,
+                visita_guiada: document.querySelector('input[name="visita"]:checked')?.value || "No",
+                como_se_entero: document.getElementById('comoSeEntero').value
+            };
+
+            try {
+                const { error } = await supabaseClient.from('kinder').insert([datos]);
+                
+                if (error) throw error;
+
+                // Ocultar formulario y mostrar mensaje de éxito
+                document.getElementById('formKinder').style.display = 'none';
+                document.getElementById('mensajeExito').style.display = 'block';
+
+                console.log("✅ Solicitud guardada con éxito en Supabase");
+
+            } catch (error) {
+                alert("Error al enviar: " + error.message);
+                console.error("Detalle del error:", error);
+            }
+        };
+    });
+    </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", async function() {
+    // 1. Inicialización de Supabase
+    const supabase = window.supabase.createClient(
+        'https://kkedvilrxqqwtaqaxlgw.supabase.co', 
+        'sb_publishable_umIPUKcCOtfXQHxAlP7YCw_ffot99AJ'   
+    );
+
+    const btnTrigger = document.getElementById('btnMiCuentaTrigger');
+    const dropdownMenu = document.getElementById('dropdownMiniMenu');
+    const modalLogin = document.getElementById('modalLogin');
+    const modalRegistro = document.getElementById('modalRegistro');
+    const displayNombre = document.getElementById('displayNombreUsuario');
+    const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+    const formRegistro = document.getElementById('formRegistro');
+    const formLogin = document.getElementById('formLogin');
+
+    // 2. Función ESTRICTA para controlar la interfaz (Evita menús fantasmas)
+    async function actualizarUI(forzarAbrirMenu = false) {
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (session && !error) {
+            // Usuario REALMENTE logueado en base de datos
+            const nombre = session.user.user_metadata?.nombre || localStorage.getItem("nombreUsuario") || "Usuario";
+            if (displayNombre) displayNombre.textContent = nombre;
+
+            if (forzarAbrirMenu && dropdownMenu) {
+                dropdownMenu.style.display = 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+                if (modalRegistro) modalRegistro.style.display = 'none';
+            }
+        } else {
+            // No hay sesión: Ocultar menú estrictamente y borrar rastros locales
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            localStorage.removeItem("nombreUsuario");
+        }
+    }
+
+    // Al cargar la página, verificar sin mostrar el menú
+    await actualizarUI(false);
+
+    // 3. BOTÓN PRINCIPAL "MI CUENTA" EN EL HEADER
+    if (btnTrigger) {
+        btnTrigger.addEventListener('click', async function(e) {
+            e.preventDefault();
+            const { data: { session } } = await supabase.auth.getSession();
+
+            if (session) {
+                // Si está conectado, mostramos/ocultamos el mini menú
+                const esVisible = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = esVisible ? 'none' : 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+            } else {
+                // Si NO está conectado: abrimos modal login y FORZAMOS ocultar el mini menú
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
+                if (modalLogin) modalLogin.style.display = 'flex'; // o 'block'
+            }
+        });
+    }
+
+    // 4. REGISTRO DE USUARIO
+    if (formRegistro) {
+        formRegistro.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailRegInput').value.trim();
+            const password = document.getElementById('inputRegPassword').value;
+            const nombre = document.getElementById('inputRegNombre').value.trim();
+            const apellido = document.getElementById('inputRegApellido').value.trim();
+
+            const { data: authData, error: authError } = await supabase.auth.signUp({
+                email: email,
+                password: password,
+                options: {
+                    data: { nombre: nombre, apellido: apellido }
+                }
+            });
+
+            if (authError) {
+                alert("Error en registro: " + authError.message);
+                return;
+            }
+
+            // Guardar en tabla 'micuenta'
+            if (authData && authData.user) {
+                const { error: insertError } = await supabase
+                    .from('micuenta')
+                    .insert([
+                        { 
+                            id: authData.user.id, 
+                            nombre: nombre,
+                            apellido: apellido,
+                            correo: email,
+                            contra: password 
+                        }
+                    ]);
+
+                if (insertError) console.error("Error en tabla:", insertError);
+            }
+
+            localStorage.setItem("nombreUsuario", nombre);
+            alert("¡Registro exitoso!");
+            if (modalRegistro) modalRegistro.style.display = "none";
+            formRegistro.reset();
+            
+            // Abre el mini menú automáticamente al terminar
+            await actualizarUI(true);
+        });
+    }
+
+    // 5. INICIO DE SESIÓN (LOGIN)
+    if (formLogin) {
+        formLogin.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('emailInput').value.trim();
+            const password = formLogin.querySelector('input[type="password"]').value;
+
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            if (error) {
+                alert("Error al iniciar sesión: Verifique su correo y contraseña (o si confirmó el correo).");
+            } else {
+            
+                if (modalLogin) modalLogin.style.display = "none";
+                formLogin.reset();
+                
+                // Abre el mini menú automáticamente
+                await actualizarUI(true);
+            }
+        });
+    }
+
+    // 6. CERRAR SESIÓN
+    if (btnCerrarSesion) {
+        btnCerrarSesion.addEventListener('click', async (e) => {
+            e.preventDefault();
+            await supabase.auth.signOut();
+            localStorage.clear(); // Limpieza total del caché
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            alert("Has cerrado sesión.");
+            window.location.reload(); 
+        });
+    }
+});
+
+
+
+</script>
+</body>
+</html>

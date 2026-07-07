@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Mis Primeros Pasos | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+   <header class="main-header">
+    <div class="header-top">
+        
+        <!-- LOGO CLIQUEABLE -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logopri.png" alt="Logo Academia" class="logo-img" width="200"> 
+            </a>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Agendamiento</a></li>
+                <li><a href="https://wa.me/50764054583" target="_blank">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        
+       <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar en el sitio..." autocomplete="off">
+            <button id="searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+  
+    <div class="nav-user-container">
+    <a href="#" id="btnMiCuentaTrigger" class="btn-mi-cuenta">
+        <i class="fa-solid fa-circle-user"></i> <span>Mi Cuenta</span>
+    </a>
+
+    <div id="dropdownMiniMenu" class="mini-menu-doit">
+        <div class="mini-menu-header">
+            <div class="user-avatar-mini">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div class="user-info-mini">
+                <span class="greeting-text">¡Hola!</span>
+                <strong id="displayNombreUsuario" class="user-name-display">Usuario</strong>
+            </div>
+        </div>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="cuenta.html" class="mini-menu-link">
+                    <i class="fa-regular fa-id-card"></i> Mi Cuenta
+                </a>
+            </li>
+           
+        </ul>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="#" id="btnCerrarSesion" class="mini-menu-link link-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    </header>
+
+    <!-- ==================== MODALES ==================== -->
+    <div id="modalLogin" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+            <form id="formLogin">
+                <div class="form-group">
+                    <label>Correo electrónico<span class="req">*</span></label>
+                    <input type="email"  id="emailInput" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña<span class="req">*</span></label>
+                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn-submit-rojo">INICIAR SESIÓN</button>
+            </form>
+
+            <div class="form-footer-link">
+                ¿No tienes una cuenta? <a id="linkIrARegistro">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRegistro" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+           <form id="formRegistro">
+    <div class="form-row-2col">
+        <div class="form-group">
+            <label>Nombre<span class="req">*</span></label>
+            <input type="text" id="inputRegNombre" class="form-control" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+            <label>Apellido<span class="req">*</span></label>
+            <input type="text" id="inputRegApellido" class="form-control" placeholder="Apellido" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Correo electrónico<span class="req">*</span></label>
+        <input type="email" id="emailRegInput" class="form-control" placeholder="Correo electrónico" required>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña<span class="req">*</span></label>
+        <input type="password" id="inputRegPassword" class="form-control" placeholder="Contraseña" required>
+    </div>
+
+    <div class="form-info-text">
+        ℹ️ <strong>Información:</strong> La contraseña debe ser de al menos 8 caracteres e incluir letras, números y caracteres especiales.
+    </div>
+
+    <button type="submit" class="btn-submit-rojo">REGISTRARSE</button>
+</form>
+
+            <div class="form-footer-link">
+                ¿Tienes una cuenta? <a id="linkIrALogin">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<title>Sobre Nosotros | Academia Mis Primeros Pasos</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Estilos específicos para esta página */
+            .hero-nosotros {
+        background-image: url('pasos.jpeg');
+        background-size: cover; /* Mantiene la imagen llenando el espacio */
+        background-position: center top; /* <--- ESTO ES LO QUE BUSCAMOS */
+        background-repeat: no-repeat;
+        background-color: rgba(0, 0, 0, 0.2); 
+        background-blend-mode: overlay;
+        
+        color: white;
+        padding: 90px 10px; /* Aumentamos el padding para dar más altura y mostrar más imagen */
+        text-align: center;
+    }
+        .hero-nosotros h1 { font-size: 3rem; margin-bottom: 10px; }
+        
+        .bloque-nosotros {
+            display: flex; 
+            align-items: center; 
+            margin-bottom: 60px; 
+            gap: 40px; 
+        }
+        .bloque-nosotros img {
+            width: 40%; 
+            height: 300px; 
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        .texto-justificado { text-align: justify; flex: 1; }
+        .texto-justificado h3 { color: #0056b3; margin-bottom: 15px; }
+    </style>
+</head>
+<body>
+
+    <header class="hero-nosotros">
+        <h1>Academia Mis Primeros Pasos</h1>
+        <p>Construyendo el futuro de tus hijos con amor, dedicación y excelencia educativa.</p>
+    </header>
+
+    <main style="padding: 40px 20px; max-width: 1000px; margin: 0 auto;">
+        
+        <div class="bloque-nosotros">
+            <img src="mis.jpg" alt="Entorno Educativo">
+            <div class="texto-justificado">
+                <h3>Espacios diseñados para el descubrimiento</h3>
+                <p>Nuestras instalaciones han sido cuidadosamente concebidas para funcionar como un laboratorio de aprendizaje vivo. Cada aula está equipada con recursos pedagógicos que fomentan la autonomía y la libre exploración, permitiendo que los niños tomen decisiones y resuelvan pequeños retos. Este entorno seguro y estructurado es fundamental para que el desarrollo cognitivo avance de manera fluida, convirtiendo cada rincón de la academia en una oportunidad para aprender algo nuevo, siempre bajo la supervisión atenta y cariñosa de nuestro personal experto.</p>
+            </div>
+        </div>
+
+        <div class="bloque-nosotros" style="flex-direction: row-reverse;">
+            <img src="a.jpeg" alt="Metodología">
+            <div class="texto-justificado">
+                <h3>Metodología activa basada en el juego</h3>
+                <p>Creemos firmemente que el juego es la forma más pura y efectiva de aprendizaje durante la niñez. A través de actividades lúdicas cuidadosamente planificadas, los conceptos abstractos se transforman en experiencias concretas y tangibles. Este enfoque no solo facilita una retención del conocimiento mucho más profunda y significativa, sino que también estimula la creatividad y la imaginación. Al aprender jugando, los estudiantes desarrollan una actitud positiva hacia la educación, viendo el estudio como una aventura fascinante que desean explorar cada día.</p>
+            </div>
+        </div>
+
+        <div class="bloque-nosotros">
+            <img src="pasos.jpeg" alt="Docentes">
+            <div class="texto-justificado">
+                <h3>Vocación docente y acompañamiento emocional</h3>
+                <p>El corazón de nuestra academia es nuestro equipo de profesionales. Entendemos que cada niño es un universo único, por lo que nuestros educadores actúan como mentores cercanos que acompañan sus logros y retos diarios. La relación docente-estudiante se basa en el respeto, la paciencia y un compromiso inquebrantable por el bienestar emocional. Nuestro personal está constantemente capacitado en las últimas tendencias pedagógicas, asegurando que cada interacción esté cargada de valor educativo y apoyo incondicional para fortalecer la seguridad y confianza de cada alumno.</p>
+            </div>
+        </div>
+
+        <div class="bloque-nosotros" style="flex-direction: row-reverse;">
+            <img src="es.jpg" alt="Valores">
+            <div class="texto-justificado">
+                <h3>Formación integral en valores</h3>
+                <p>La educación en valores constituye el pilar fundamental de nuestra filosofía institucional. Trabajamos diariamente en la promoción del respeto, la honestidad, la tolerancia y la colaboración mutua dentro y fuera del salón de clases. Buscamos formar ciudadanos ejemplares que, desde sus primeros pasos, comprendan la importancia de integrarse a la sociedad con una visión ética, responsable y empática hacia los demás. Mediante dinámicas de grupo y ejemplos diarios, nuestros estudiantes aprenden a valorar la diversidad y a trabajar en equipo, adquiriendo las herramientas sociales necesarias.</p>
+            </div>
+        </div>
+
+    </main>
+
+<footer class="main-footer">
+   <div class="social-icons">
+    <a href="https://www.instagram.com/academiamisprimerospasos/" class="ig" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1H9iDYqST6/" class="fb" target="_blank">
+        <i class="fa-brands fa-facebook"></i> 
+    </a>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=academiamisprimerospasos@gmail.com
+    " class="mail">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    </div>
+        <p>&copy; 2026 Academia Mis Primeros Pasos. Todos los derechos reservados.</p>
+    </footer>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    // 1. Inicializa EmailJS
+    (function(){
+        emailjs.init("Fq1n5f_Ta6qRdsTjT"); 
+    })();
+
+    // 2. Lógica del formulario
+    document.getElementById('comentarioForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        console.log("Mensaje a enviar:", document.getElementById('comentario').value);
+        const btnPublicar = document.getElementById('btnPublicar');
+        const mensajeExito = document.getElementById('mensajeExito');
+
+        btnPublicar.textContent = "Enviando...";
+        btnPublicar.disabled = true;
+
+        // 3. Enviar el formulario con tus IDs
+        emailjs.sendForm('service_y523q36', 'template_e2omgro', this)
+            .then(function() {
+                btnPublicar.textContent = "PUBLICAR EL COMENTARIO";
+                btnPublicar.disabled = false;
+                
+                mensajeExito.style.display = 'inline';
+                document.getElementById('comentarioForm').reset();
+
+                setTimeout(function() {
+                    mensajeExito.style.display = 'none';
+                }, 5000);
+            }, function(error) {
+                alert('Hubo un error al enviar el comentario: ' + JSON.stringify(error));
+                btnPublicar.textContent = "PUBLICAR EL COMENTARIO";
+                btnPublicar.disabled = false;
+            });
+    });
+
+            // Elementos
+     
+    // 1. Obtener los elementos del DOM
+    const modalLogin = document.getElementById('modalLogin');
+    const modalRegistro = document.getElementById('modalRegistro');
+    const btnMiCuenta = document.getElementById('btnAbrirLogin'); // Este es tu botón "Mi Cuenta"
+    const linkRegistro = document.querySelector('#modalLogin a'); // El enlace "Registrarse" dentro del login
+    const linkLogin = document.querySelector('#modalRegistro a'); // El enlace "Iniciar sesión" dentro del registro
+
+   document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("btnMiCuentaTrigger");
+    if (btn) {
+        btn.onclick = abrirFlujoCuenta;   // o el nombre que uses
+    } else {
+        console.warn("No se encontró el botón Mi Cuenta");
+    }
+});
+
+    linkRegistro.onclick = (e) => {
+        e.preventDefault();
+        modalLogin.style.display = "none";
+        modalRegistro.style.display = "block";
+    };
+
+    linkLogin.onclick = (e) => {
+        e.preventDefault();
+        modalRegistro.style.display = "none";
+        modalLogin.style.display = "block";
+    };
+
+    // 3. Cerrar al hacer clic fuera del contenido del modal
+    window.onclick = (event) => {
+        if (event.target == modalLogin) modalLogin.style.display = "none";
+        if (event .target == modalRegistro) modalRegistro.style.display = "none";
+    };
+    </script>
+  <!-- ==================== SCRIPT FINAL (UNA SOLA VEZ) ==================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // Elementos
+        const btnMiCuenta = document.getElementById("btnMiCuentaTrigger");
+        const dropdownMenu = document.getElementById("dropdownMiniMenu");
+        const modalLogin = document.getElementById("modalLogin");
+        const modalRegistro = document.getElementById("modalRegistro");
+        const linkIrARegistro = document.getElementById("linkIrARegistro");
+        const linkIrALogin = document.getElementById("linkIrALogin");
+        const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+        const displayNombre = document.getElementById("displayNombreUsuario");
+        const closeButtons = document.querySelectorAll(".modal-close");
+
+        // Función principal del botón
+        function abrirFlujoCuenta(e) {
+            if (e) e.preventDefault();
+
+            console.log("--> [SISTEMA]: Botón 'Mi Cuenta' presionado.");
+
+            const estaLogueado = localStorage.getItem("sesionActiva") === "true";
+            const nombreUsuario = localStorage.getItem("nombreUsuario");
+
+            if (estaLogueado && nombreUsuario) {
+                console.log("--> [SISTEMA]: Usuario autenticado como: " + nombreUsuario);
+                if (displayNombre) displayNombre.textContent = nombreUsuario;
+                
+                dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+                modalLogin.style.display = "none";
+            } else {
+                console.log("--> [SISTEMA]: No hay sesión activa → Abriendo Login");
+                modalLogin.style.display = "flex";
+                dropdownMenu.style.display = "none";
+            }
+        }
+
+        // Asignar evento al botón
+        if (btnMiCuenta) {
+            btnMiCuenta.addEventListener("click", abrirFlujoCuenta);
+            console.log("✅ Botón Mi Cuenta configurado correctamente");
+        }
+
+        // Cerrar sesión
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener("click", function(e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                localStorage.removeItem("nombreUsuario");
+                dropdownMenu.style.display = "none";
+                location.reload();
+            });
+        }
+
+        // Cambiar entre Login y Registro
+        if (linkIrARegistro) {
+            linkIrARegistro.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "flex";
+            });
+        }
+        if (linkIrALogin) {
+            linkIrALogin.addEventListener("click", () => {
+                modalRegistro.style.display = "none";
+                modalLogin.style.display = "flex";
+            });
+        }
+
+        // Cerrar modales con X
+        closeButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "none";
+            });
+        });
+
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener("click", (e) => {
+            if (e.target === modalLogin) modalLogin.style.display = "none";
+            if (e.target === modalRegistro) modalRegistro.style.display = "none";
+            if (!e.target.closest(".nav-user-container")) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+
+        // Funciones de Login y Registro
+        window.procesarLogin = function() {
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", "nombreDelFormulario"); // Cambia según necesites
+            modalLogin.style.display = "none";
+            location.reload();
+        };
+
+        window.procesarRegistro = function() {
+            const nombre = document.getElementById("inputRegNombre").value || "Usuario";
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", nombre);
+            modalRegistro.style.display = "none";
+            location.reload();
+        };
+    });
+    </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    function realizarBusqueda() {
+        let termino = searchInput.value.trim().toLowerCase();
+
+        if (!termino) {
+            alert("Por favor escribe algo para buscar");
+            return;
+        }
+
+        // Redirecciones según palabras clave
+        if (termino.includes("maternal")) {
+            window.location.href = "maternal.html";
+
+        } else if (termino.includes("pre-kinder") || 
+                   termino.includes("prekinder") || 
+                   termino.includes("pre kinder")) {
+            window.location.href = "prekinder.html";
+
+        } else if (termino.includes("kinder") || termino.includes("kínder")) {
+            window.location.href = "kinder.html";
+
+        } else {
+            // Si no coincide con nada
+            alert("No encontramos resultados para: " + termino + "\n\nPrueba con: maternal, prekinder o kinder");
+        }
+    }
+
+    // Buscar al presionar Enter
+    searchInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            realizarBusqueda();
+        }
+    });
+
+    // Buscar al hacer clic en el botón
+    searchButton.addEventListener("click", realizarBusqueda);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", async function() {
+    // 1. Inicialización de Supabase
+    const supabase = window.supabase.createClient(
+        'https://kkedvilrxqqwtaqaxlgw.supabase.co', 
+        'sb_publishable_umIPUKcCOtfXQHxAlP7YCw_ffot99AJ'   
+    );
+
+    const btnTrigger = document.getElementById('btnMiCuentaTrigger');
+    const dropdownMenu = document.getElementById('dropdownMiniMenu');
+    const modalLogin = document.getElementById('modalLogin');
+    const modalRegistro = document.getElementById('modalRegistro');
+    const displayNombre = document.getElementById('displayNombreUsuario');
+    const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+    const formRegistro = document.getElementById('formRegistro');
+    const formLogin = document.getElementById('formLogin');
+
+    // 2. Función ESTRICTA para controlar la interfaz (Evita menús fantasmas)
+    async function actualizarUI(forzarAbrirMenu = false) {
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (session && !error) {
+            // Usuario REALMENTE logueado en base de datos
+            const nombre = session.user.user_metadata?.nombre || localStorage.getItem("nombreUsuario") || "Usuario";
+            if (displayNombre) displayNombre.textContent = nombre;
+
+            if (forzarAbrirMenu && dropdownMenu) {
+                dropdownMenu.style.display = 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+                if (modalRegistro) modalRegistro.style.display = 'none';
+            }
+        } else {
+            // No hay sesión: Ocultar menú estrictamente y borrar rastros locales
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            localStorage.removeItem("nombreUsuario");
+        }
+    }
+
+    // Al cargar la página, verificar sin mostrar el menú
+    await actualizarUI(false);
+
+    // 3. BOTÓN PRINCIPAL "MI CUENTA" EN EL HEADER
+    if (btnTrigger) {
+        btnTrigger.addEventListener('click', async function(e) {
+            e.preventDefault();
+            const { data: { session } } = await supabase.auth.getSession();
+
+            if (session) {
+                // Si está conectado, mostramos/ocultamos el mini menú
+                const esVisible = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = esVisible ? 'none' : 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+            } else {
+                // Si NO está conectado: abrimos modal login y FORZAMOS ocultar el mini menú
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
+                if (modalLogin) modalLogin.style.display = 'flex'; // o 'block'
+            }
+        });
+    }
+
+    // 4. REGISTRO DE USUARIO
+    if (formRegistro) {
+        formRegistro.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailRegInput').value.trim();
+            const password = document.getElementById('inputRegPassword').value;
+            const nombre = document.getElementById('inputRegNombre').value.trim();
+            const apellido = document.getElementById('inputRegApellido').value.trim();
+
+            const { data: authData, error: authError } = await supabase.auth.signUp({
+                email: email,
+                password: password,
+                options: {
+                    data: { nombre: nombre, apellido: apellido }
+                }
+            });
+
+            if (authError) {
+                alert("Error en registro: " + authError.message);
+                return;
+            }
+
+            // Guardar en tabla 'micuenta'
+            if (authData && authData.user) {
+                const { error: insertError } = await supabase
+                    .from('micuenta')
+                    .insert([
+                        { 
+                            id: authData.user.id, 
+                            nombre: nombre,
+                            apellido: apellido,
+                            correo: email,
+                            contra: password 
+                        }
+                    ]);
+
+                if (insertError) console.error("Error en tabla:", insertError);
+            }
+
+            localStorage.setItem("nombreUsuario", nombre);
+            alert("¡Registro exitoso!");
+            if (modalRegistro) modalRegistro.style.display = "none";
+            formRegistro.reset();
+            
+            // Abre el mini menú automáticamente al terminar
+            await actualizarUI(true);
+        });
+    }
+
+    // 5. INICIO DE SESIÓN (LOGIN)
+    if (formLogin) {
+        formLogin.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('emailInput').value.trim();
+            const password = formLogin.querySelector('input[type="password"]').value;
+
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            if (error) {
+                alert("Error al iniciar sesión: Verifique su correo y contraseña (o si confirmó el correo).");
+            } else {
+            
+                if (modalLogin) modalLogin.style.display = "none";
+                formLogin.reset();
+                
+                // Abre el mini menú automáticamente
+                await actualizarUI(true);
+            }
+        });
+    }
+
+    // 6. CERRAR SESIÓN
+    if (btnCerrarSesion) {
+        btnCerrarSesion.addEventListener('click', async (e) => {
+            e.preventDefault();
+            await supabase.auth.signOut();
+            localStorage.clear(); // Limpieza total del caché
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            alert("Has cerrado sesión.");
+            window.location.reload(); 
+        });
+    }
+});
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

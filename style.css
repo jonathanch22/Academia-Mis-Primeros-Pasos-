@@ -1,0 +1,1194 @@
+/* VARIABLES: Ahora con Azul Marino Elegante */
+:root {
+    /* Paleta centrada en tonos Celestes y Azules Oscuros */
+    --azul-pastel: #81D4FA;    /* Un celeste vivo para detalles */
+    --verde-pastel: #4FC3F7;   /* Un celeste suave para acentos */
+    --durazno-pastel: #B3E5FC; /* Un celeste muy claro para fondos */
+    --crema: #F9FAFB;          /* Fondo muy limpio y neutral */
+    --texto: #1B3039;          /* Azul muy oscuro, casi negro, para el texto */
+    --azul-oscuro: #01579B;    /* Tu nuevo Celeste Oscuro Profesional (Header/Footer) */
+    --blanco: #ffffff;
+}
+/* --- REGLAS DE APLICACIÓN --- */
+
+/* Encabezado y Navbar ahora comparten el mismo Azul Marino */
+.main-header, .navbar {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+/* Ajuste para que la barra de búsqueda y el menú se vean uniformes */
+.navbar ul {
+    background-color: transparent !important; /* Eliminamos el fondo extra */
+    padding: 10px 50px;
+}
+
+/* Barra de búsqueda con margen a la derecha (como pediste) */
+.search-bar {
+    margin-left: auto;
+    margin-right: 20px;
+    width: 30%;
+    background: var(--blanco);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+
+/* Botón de búsqueda (acorde al azul marino) */
+.search-bar button {
+    background-color: var(--azul-pastel);
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: var(--azul-oscuro);
+}
+
+/* Botones principales para que resalten sobre el marino */
+.btn-primary { 
+    background-color: var(--azul-oscuro); 
+    color: white; 
+}
+
+/* Footer a juego con el azul marino */
+.main-footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 50px 20px;
+}
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: var(--crema);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* HEADER (Basado en tu imagen) */
+.main-header {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 50px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo {
+    font-family: 'Nunito', sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span span {
+    color: var(--durazno-pastel);
+}
+
+.search-bar {
+    display: flex;
+    background: var(--blanco);
+    border-radius: 5px;
+    overflow: hidden;
+    width: 35%;
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px;
+    flex-grow: 1;
+    outline: none;
+}
+
+.search-bar button {
+    background-color: var(--azul-pastel);
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    color: var(--azul-oscuro);
+}
+
+/* Definimos la variable para el color blanco si no la tienes aún */
+:root {
+    --blanco: #ffffff;
+}
+
+/* Agregamos el punto (.) para indicar que es una clase */
+.user-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* Opcional: centra los elementos verticalmente */
+}
+
+/* Estilo para los enlaces (etiqueta <a>) dentro de .user-actions */
+.user-actions a {
+    color: var(--blanco); /* Aplica el color blanco */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    font-size: 14px;
+    transition: opacity 0.2s ease; /* Opcional: un efecto suave al pasar el mouse */
+}
+
+/* Opcional: Qué pasa cuando el usuario pasa el mouse por encima */
+.user-actions a:hover {
+    opacity: 0.8; /* Se vuelve un poquito transparente al pasar el mouse */
+    /* O si prefieres subrayarlo al pasar el mouse: text-decoration: underline; */
+}
+
+.cart-icon {
+    position: relative;
+}
+
+.cart-icon span {
+    background: var(--durazno-pastel);
+    color: var(--azul-oscuro);
+    font-size: 10px;
+    padding: 2px 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid var(--durazno-pastel);
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&q=80&w=1400');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.hero h1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: 50px;
+    color: var(--blanco);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Esto añade una sombra suave para mejorar la lectura */
+}
+
+.hero-content p {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    /* Aquí añadimos la misma sombra que tiene tu h1 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* BOTONES */
+.btn {
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary { background-color: var(--azul-oscuro); color: white; }
+.btn-outline { border: 2px solid var(--blanco); color: var(--blanco); }
+.btn-submit { background-color: var(--verde-pastel); color: var(--azul-oscuro); width: 100%; border: none; cursor: pointer; margin-top: 10px;}
+
+/* CARDS */
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--azul-oscuro);
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.card {
+    background: var(--blanco);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.card:hover { transform: translateY(-10px); }
+.card-image img { width: 100%; height: 200px; object-fit: cover; }
+.card-body { padding: 25px; text-align: center; }
+.card-maternal { border-bottom: 8px solid var(--azul-pastel); }
+.card-prekinder { border-bottom: 8px solid var(--verde-pastel); }
+.card-kinder { border-bottom: 8px solid var(--durazno-pastel); }
+
+/* FORMULARIO */
+.form-section { background-color: #f0f7ff; border-radius: 50px; }
+.form-container { max-width: 700px; margin: 0 auto; text-align: center; }
+.form-group { text-align: left; margin-bottom: 20px; }
+.form-group label { display: block; font-weight: 700; margin-bottom: 5px; }
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+/* FOOTER REDES SOCIALES */
+.main-footer {
+    background-color: var(--azul-oscuro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    font-size: 35px;
+    color: var(--blanco);
+    transition: 0.3s;
+}
+
+.comment-section {
+    padding: 40px 20px;
+    background-color: var(--crema);
+}
+
+.comment-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.comment-section h3 {
+    color: var(--azul-oscuro);
+    margin-bottom: 10px;
+}
+
+.comment-note {
+    font-size: 14px;
+    color: var(--texto);
+    margin-bottom: 20px;
+}
+
+.form-group { margin-bottom: 15px; }
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--azul-oscuro);
+}
+
+.comment-container textarea, 
+.comment-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Para poner los campos Nombre y Correo lado a lado en pantallas grandes */
+.form-row-custom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.btn-submit-comment {
+    background-color: var(--azul-oscuro);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.btn-submit-comment:hover {
+    opacity: 0.9;
+}
+
+/* Responsivo para celulares */
+@media (max-width: 600px) {
+    .form-row-custom { grid-template-columns: 1fr; }
+}
+
+.social-icons a:hover { color: var(--durazno-pastel); }
+
+/* --- RESPONSIVIDAD (Laptop vs Teléfono) --- */
+
+/* Cuando la pantalla es pequeña (Teléfono) */
+@media (max-width: 768px) {
+    .header-top { flex-direction: column; gap: 15px; padding: 20px; }
+    .search-bar { width: 100%; }
+    .navbar ul { flex-direction: column; align-items: center; gap: 10px; }
+    
+    .hero h1 { font-size: 30px; }
+    .hero-buttons { flex-direction: column; }
+
+    .cards-grid { grid-template-columns: 1fr; } /* Las cartas se apilan */
+    .form-row { grid-template-columns: 1fr; } /* El formulario se vuelve vertical */
+    
+    .container { padding: 40px 15px; }
+}
+
+/* Cuando la pantalla es grande (Laptop/Desktop) */
+@media (min-width: 1024px) {
+    .hero { height: 600px; }
+    .section-title { font-size: 45px; }
+}
+
+.hero-email-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    color: var(--verde-pastel); /* Un color que resalte sobre el fondo */
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* La misma sombra de tus títulos */
+    transition: 0.3s;
+}
+
+.hero-email-icon:hover {
+    color: var(--blanco);
+    transform: scale(1.05); /* Un pequeño efecto al pasar el mouse */
+}
+
+/* --- ESTILOS PARA LA VENTANA FLOTANTE (MODAL) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Para que quede por encima de todo */
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+/* Clase para ocultar el modal */
+.modal-overlay.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: slideUp 0.4s ease-out; /* Animación de entrada */
+}
+
+.modal-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.modal-details {
+    background-color: #f4f6f9; /* Un fondito gris claro para resaltar los datos */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.modal-details p {
+    margin: 8px 0;
+    color: var(--azul-oscuro);
+    font-size: 1rem;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.btn-submit {
+    background-color: #0056b3; /* El color azul que ya usas */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #004494;
+}
+/* --- ESTILOS GENERALES DE MODALES (DO IT CENTER STYLE) --- */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+    background: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    padding: 30px 35px;
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    color: #333;
+    cursor: pointer;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.modal-titulo {
+    text-align: center;
+    color: #d32f2f; /* Rojo corporativo Mis Primeros Pasos */
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+/* --- FORMULARIOS E INPUTS --- */
+.form-group {
+    margin-bottom: 16px;
+    text-align: left;
+}
+
+.form-row-2col {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row-2col .form-group {
+    flex: 1;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.85rem;
+    color: #333333;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group label .req {
+    color: #d32f2f;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: #333;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-control:focus {
+    border-color: #333333;
+}
+
+.form-info-text {
+    font-size: 0.8rem;
+    color: #555555;
+    line-height: 1.4;
+    margin: 15px 0;
+    text-align: left;
+}
+
+.btn-submit-rojo {
+    background-color: #d32f2f;
+    color: #ffffff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-rojo:hover {
+    background-color: #b71c1c;
+}
+
+.form-footer-link {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555555;
+    margin-top: 20px;
+}
+
+.form-footer-link a {
+    color: #333333;
+    text-decoration: underline;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- MINI MENÚ FLOTANTE DERECHO (CON FLECHA SUPERIOR) --- */
+.nav-user-container {
+    position: relative;
+    display: inline-block;
+}
+
+.mini-menu-doit {
+    display: none;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 240px;
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    z-index: 1000;
+    text-align: left;
+}
+
+/* Flecha superior (Caret) del menú */
+.mini-menu-doit::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    right: 24px;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+}
+
+.mini-menu-header {
+    padding: 15px 18px 10px 18px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #000000;
+}
+
+.mini-menu-doit hr {
+    border: 0;
+    height: 1px;
+    background: #eeeeee;
+    margin: 4px 0;
+}
+
+.mini-menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mini-menu-list li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.15s;
+}
+
+.mini-menu-list li a:hover {
+    background-color: #f8f9fa;
+}
+
+.mini-menu-list li a i {
+    font-size: 1.1rem;
+    color: #555555;
+    width: 20px;
+    text-align: center;
+}
+
+/* Modales ocultos */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* El JS activará esta clase para mostrar */
+.modal-overlay.show { display: flex; }
+
+/* Menú oculto */
+#dropdownMiniMenu {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+}
+
+/* ====================== BOTÓN MI CUENTA ====================== */
+.nav-user-container {
+    position: relative;
+    display: inline-block;
+}
+
+#btnMiCuentaTrigger {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+#btnMiCuentaTrigger:hover {
+    color: #ffd700 !important;           /* Amarillo dorado al pasar mouse */
+    background-color: rgba(255, 255, 255, 0.1);
+    text-decoration: none !important;
+}
+
+#btnMiCuentaTrigger i {
+    color: white;
+}
+
+/* Opcional: Si quieres que sea más discreto */
+#btnMiCuentaTrigger:active {
+    transform: scale(0.98);
+}
+
+/*cuenta.hmtl */ 
+    .cuenta-container {
+        display: flex;
+        max-width: 1200px;
+        margin: 40px auto;
+        gap: 40px;
+        padding: 0 20px;
+    }
+    .sidebar {
+        width: 280px;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        height: fit-content;
+    }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    .sidebar li {
+        padding: 12px 15px;
+        border-radius: 4px;
+    }
+    .sidebar li.active {
+        background: #fff0f0;
+        color: #d32f2f;
+        font-weight: bold;
+    }
+    .content {
+        flex: 1;
+    }
+    .info-grid {
+        display: flex;
+        gap: 50px;
+        margin-top: 20px;
+    }
+    .small-link {
+        font-size: 0.9rem;
+        color: #d32f2f;
+    }
+
+    cuenta-container {
+        display: flex;
+        max-width: 1100px;
+        margin: 40px auto;
+        gap: 40px;
+        padding: 0 20px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .sidebar {
+        width: 260px;
+        background: #f9f9f9;
+        padding: 25px;
+        border-radius: 8px;
+        height: fit-content;
+    }
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+    }
+    .sidebar li {
+        padding: 12px 15px;
+        margin-bottom: 5px;
+        border-radius: 6px;
+    }
+    .sidebar li.active {
+        background: #ffebee;
+        color: #d32f2f;
+        font-weight: bold;
+    }
+    .content {
+        flex: 1;
+    }
+    .info-contacto, .seccion-escuela {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+   
+/* ====================== COLORES MODALES ====================== */
+
+/* Título principal "Mis Primeros Pasos" */
+.modal-titulo {
+    color: #1e40af !important;     /* Azul fuerte */
+    font-weight: 700;
+}
+
+/* Textos de labels (Nombre, Correo, Contraseña, etc.) */
+.modal-box label {
+    color: #1e3a8a !important;     /* Azul oscuro */
+    font-weight: 600;
+}
+
+/* Enlaces (Registrarse, Iniciar sesión) */
+.form-footer-link a {
+    color: #2563eb !important;     /* Azul brillante */
+    font-weight: 600;
+}
+
+/* Texto de información (el de la contraseña) */
+.form-info-text {
+    color: #3b82f6 !important;
+}
+
+/* Botones de cerrar (X) */
+.modal-close {
+    color: #1e40af !important;
+}
+
+/* Opcional: Cambiar también el color del botón rojo a azul */
+.btn-submit-rojo {
+    background-color: #2563eb !important;
+}
+
+.btn-submit-rojo:hover {
+    background-color: #1e40af !important;
+}
+    
+/* Botón Ver Más - Azul */
+.btn-ver-mas {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background-color: #2563eb;        /* Azul bonito */
+    color: white !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-ver-mas:hover {
+    background-color: #1e40af;        /* Azul más oscuro al pasar mouse */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ====================== PÁGINA MATERNAL ====================== */
+
+.programa-detalle {
+    padding: 60px 20px;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.programa-detalle .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.titulo-principal {
+    font-size: 3rem;
+    color: #1e3a8a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #3b82f6;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+.descripcion-larga {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #374151;
+}
+
+.descripcion-larga p {
+    margin-bottom: 20px;
+}
+
+/* ====================== FORMULARIO ====================== */
+
+.formulario-solicitud {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.formulario-solicitud h2 {
+    color: #1e40af;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.formulario-solicitud h3 {
+    color: #1e3a8a;
+    margin: 25px 0 15px 0;
+    border-bottom: 2px solid #e0f2fe;
+    padding-bottom: 8px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e7ff;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.radio-group {
+    display: flex;
+    gap: 25px;
+}
+
+.checkbox-group {
+    background: #f0f9ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.btn-enviar:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+    background: #ecfdf5;
+    border: 2px solid #34d399;
+    color: #065f46;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.mensaje-exito h3 {
+    color: #10b981;
+}
+
+/* Separar la imagen del formulario */
+.descripcion-larga {
+    margin-bottom: 50px;
+}
+
+.formulario-solicitud {
+    margin-top: 40px;           /* Espacio superior */
+}
+
+/* Opcional: Centrar y mejorar la imagen */
+.card-image img,
+img[alt="Entorno Educativo"] {
+    width: 100%;
+    max-width: 700px;           /* Tamaño más pequeño */
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 30px auto;          /* Centrado con espacio arriba y abajo */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+#dropdownMiniMenu {
+    display: none; /* Esto oculta el menú al cargar la página */
+}
+
+/* ==================== ESTILOS DEL MINI MENÚ DESPLEGABLE ==================== */
+
+/* 1. Contenedor padre: fundamental para que el menú flote en su sitio */
+.nav-user-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Reemplaza .btn-mi-cuenta por el nombre real de tu clase o ID */
+.btn-mi-cuenta {
+    animation: none !important;      /* Elimina animaciones continuas (pulsos, rebotes, brillos) */
+    transition: none !important;     /* Elimina el efecto de retraso al pasar el mouse o hacer clic */
+    transform: none !important;      /* Evita que el botón se mueva, se hunda o cambie de tamaño */
+}
+
+/* Si la animación ocurre solo cuando pasas el mouse por encima (Hover): */
+.btn-mi-cuenta:hover {
+    animation: none !important;
+    transform: none !important;
+    box-shadow: none !important;     /* Opcional: quita sombras que aparezcan al pasar el mouse */
+}
+
+/* 3. La Caja Desplegable (Flotante y Oculta) */
+.mini-menu-doit {
+    display: none; /* JS se encarga de cambiarlo a 'block' */
+    position: absolute;
+    top: calc(100% + 12px); /* Se posiciona justo debajo del botón */
+    right: 0;
+    width: 240px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eaeaea;
+    z-index: 9999;
+    padding: 12px 0;
+    animation: fadeInMenu 0.2s ease-in-out;
+}
+
+/* Pequeña animación para que aparezca suavemente */
+@keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Cabecera del Mini Menú */
+.mini-menu-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 16px 12px 16px;
+}
+
+.user-avatar-mini {
+    width: 40px;
+    height: 40px;
+    background-color: #ffe5e5;
+    color: #d90429;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.user-info-mini {
+    display: flex;
+    flex-direction: column;
+}
+
+.greeting-text {
+    font-size: 0.8rem;
+    color: #777;
+    line-height: 1;
+}
+
+.user-name-display {
+    font-size: 1rem;
+    color: #222;
+    font-family: 'Nunito', sans-serif;
+    word-break: break-word;
+}
+
+/* 5. Líneas divisorias */
+.mini-menu-divider {
+    border: none;
+    border-top: 1px solid #f0f0f0;
+    margin: 4px 0;
+}
+
+/* 6. Listas y Enlaces */
+.mini-menu-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mini-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    color: #444 !important;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.mini-menu-link i {
+    width: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+
+/* Efecto Hover en las opciones */
+.mini-menu-link:hover {
+    background-color: #f8f9fa;
+    color: #d90429 !important;
+}
+
+.mini-menu-link:hover i {
+    color: #d90429;
+}
+
+/* Estilo especial para Cerrar Sesión */
+.link-logout {
+    color: #d90429 !important;
+    font-weight: 700;
+}
+
+.link-logout i {
+    color: #d90429;
+}
+
+.link-logout:hover {
+    background-color: #fff0f0;
+}

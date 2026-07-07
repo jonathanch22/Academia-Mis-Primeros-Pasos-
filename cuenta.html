@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Mis Primeros Pasos | Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Nunito:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   <header class="main-header">
+    <div class="header-top">
+        
+        <!-- LOGO CLIQUEABLE -->
+        <div class="logo">
+            <a href="index.html">
+                <img src="logopri.png" alt="Logo Academia" class="logo-img" width="200"> 
+            </a>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cita.html">Agendamiento</a></li>
+                <li><a href="https://wa.me/50764054583" target="_blank">Contacto</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+        
+        
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar en el sitio..." autocomplete="off">
+            <button id="searchButton">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+  
+    <div class="nav-user-container">
+    <a href="#" id="btnMiCuentaTrigger" class="btn-mi-cuenta">
+        <i class="fa-solid fa-circle-user"></i> <span>Mi Cuenta</span>
+    </a>
+
+    <div id="dropdownMiniMenu" class="mini-menu-doit">
+        <div class="mini-menu-header">
+            <div class="user-avatar-mini">
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div class="user-info-mini">
+                <span class="greeting-text">¡Hola!</span>
+                <strong id="displayNombreUsuario" class="user-name-display">Usuario</strong>
+            </div>
+        </div>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="cuenta.html" class="mini-menu-link">
+                    <i class="fa-regular fa-id-card"></i> Mi Cuenta
+                </a>
+            </li>
+           
+        </ul>
+        
+        <hr class="mini-menu-divider">
+        
+        <ul class="mini-menu-list">
+            <li>
+                <a href="#" id="btnCerrarSesion" class="mini-menu-link link-logout">
+                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Cerrar Sesión
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+    </header>
+
+    <!-- ==================== MODALES ==================== -->
+    <div id="modalLogin" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+            <form id="formLogin">
+                <div class="form-group">
+                    <label>Correo electrónico<span class="req">*</span></label>
+                    <input type="email"  id="emailInput" class="form-control" placeholder="Correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label>Contraseña<span class="req">*</span></label>
+                    <input type="password" class="form-control" placeholder="Contraseña" required>
+                </div>
+                <button type="submit" class="btn-submit-rojo">INICIAR SESIÓN</button>
+            </form>
+
+            <div class="form-footer-link">
+                ¿No tienes una cuenta? <a id="linkIrARegistro">Registrarse</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalRegistro" class="modal-overlay">
+        <div class="modal-box">
+            <span class="modal-close">&times;</span>
+            <div class="modal-titulo">Mis Primeros Pasos</div>
+            
+           <form id="formRegistro">
+    <div class="form-row-2col">
+        <div class="form-group">
+            <label>Nombre<span class="req">*</span></label>
+            <input type="text" id="inputRegNombre" class="form-control" placeholder="Nombre" required>
+        </div>
+        <div class="form-group">
+            <label>Apellido<span class="req">*</span></label>
+            <input type="text" id="inputRegApellido" class="form-control" placeholder="Apellido" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Correo electrónico<span class="req">*</span></label>
+        <input type="email" id="emailRegInput" class="form-control" placeholder="Correo electrónico" required>
+    </div>
+
+    <div class="form-group">
+        <label>Contraseña<span class="req">*</span></label>
+        <input type="password" id="inputRegPassword" class="form-control" placeholder="Contraseña" required>
+    </div>
+
+    <div class="form-info-text">
+        ℹ️ <strong>Información:</strong> La contraseña debe ser de al menos 8 caracteres e incluir letras, números y caracteres especiales.
+    </div>
+
+    <button type="submit" class="btn-submit-rojo">REGISTRARSE</button>
+</form>
+
+            <div class="form-footer-link">
+                ¿Tienes una cuenta? <a id="linkIrALogin">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<header class="main-header">
+        <!-- Tu header actual -->
+    </header>
+
+    <div class="cuenta-container">
+        <div class="sidebar">
+            <h3>Mi Cuenta</h3>
+            <ul>
+                <li class="active"><a href="cuenta.html">Información Personal</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Mi Cuenta</h1>
+            <h2>Información de la cuenta</h2>
+
+            <div class="info-container">
+            <h3>Información de Contacto</h3>
+            <p><strong>Padre/Madre:</strong> <span id="nombreUsuario">Cargando...</span></p>
+            <p><strong>Correo:</strong> <span id="emailUsuario">Cargando...</span></p>
+        </div>
+
+
+            <div class="seccion-escuela">
+                <h3>Próximos Eventos</h3>
+                <p>Reunión de padres: <strong>10 de Julio 2026</strong></p>
+                <p>Fun Day Familiar: <strong>25 de Julio 2026</strong></p>
+            </div>
+        </div>
+    </div>
+
+
+
+</section>
+
+   <footer class="main-footer">
+   <div class="social-icons">
+    <a href="https://www.instagram.com/academiamisprimerospasos/" class="ig" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+
+    <a href="https://www.facebook.com/share/1H9iDYqST6/" class="fb" target="_blank">
+        <i class="fa-brands fa-facebook"></i> 
+    </a>
+
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=academiamisprimerospasos@gmail.com
+    " class="mail">
+        <i class="fa-solid fa-envelope"></i>
+    </a>
+    </div>
+        <p>&copy; 2026 Academia Mis Primeros Pasos. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    // 1. Inicializa EmailJS
+    (function(){
+        emailjs.init("Fq1n5f_Ta6qRdsTjT"); 
+    })();
+
+    // 2. Lógica del formulario
+    document.getElementById('comentarioForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        console.log("Mensaje a enviar:", document.getElementById('comentario').value);
+        const btnPublicar = document.getElementById('btnPublicar');
+        const mensajeExito = document.getElementById('mensajeExito');
+
+        btnPublicar.textContent = "Enviando...";
+        btnPublicar.disabled = true;
+
+        // 3. Enviar el formulario con tus IDs
+        emailjs.sendForm('service_y523q36', 'template_e2omgro', this)
+            .then(function() {
+                btnPublicar.textContent = "PUBLICAR EL COMENTARIO";
+                btnPublicar.disabled = false;
+                
+                mensajeExito.style.display = 'inline';
+                document.getElementById('comentarioForm').reset();
+
+                setTimeout(function() {
+                    mensajeExito.style.display = 'none';
+                }, 5000);
+            }, function(error) {
+                alert('Hubo un error al enviar el comentario: ' + JSON.stringify(error));
+                btnPublicar.textContent = "PUBLICAR EL COMENTARIO";
+                btnPublicar.disabled = false;
+            });
+    });
+
+            // Elementos
+     
+    // 1. Obtener los elementos del DOM
+    const modalLogin = document.getElementById('modalLogin');
+    const modalRegistro = document.getElementById('modalRegistro');
+    const btnMiCuenta = document.getElementById('btnAbrirLogin'); // Este es tu botón "Mi Cuenta"
+    const linkRegistro = document.querySelector('#modalLogin a'); // El enlace "Registrarse" dentro del login
+    const linkLogin = document.querySelector('#modalRegistro a'); // El enlace "Iniciar sesión" dentro del registro
+
+   document.addEventListener("DOMContentLoaded", function() {
+    const btn = document.getElementById("btnMiCuentaTrigger");
+    if (btn) {
+        btn.onclick = abrirFlujoCuenta;   // o el nombre que uses
+    } else {
+        console.warn("No se encontró el botón Mi Cuenta");
+    }
+});
+
+    linkRegistro.onclick = (e) => {
+        e.preventDefault();
+        modalLogin.style.display = "none";
+        modalRegistro.style.display = "block";
+    };
+
+    linkLogin.onclick = (e) => {
+        e.preventDefault();
+        modalRegistro.style.display = "none";
+        modalLogin.style.display = "block";
+    };
+
+    // 3. Cerrar al hacer clic fuera del contenido del modal
+    window.onclick = (event) => {
+        if (event.target == modalLogin) modalLogin.style.display = "none";
+        if (event .target == modalRegistro) modalRegistro.style.display = "none";
+    };
+    </script>
+  <!-- ==================== SCRIPT FINAL (UNA SOLA VEZ) ==================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        // Elementos
+        const btnMiCuenta = document.getElementById("btnMiCuentaTrigger");
+        const dropdownMenu = document.getElementById("dropdownMiniMenu");
+        const modalLogin = document.getElementById("modalLogin");
+        const modalRegistro = document.getElementById("modalRegistro");
+        const linkIrARegistro = document.getElementById("linkIrARegistro");
+        const linkIrALogin = document.getElementById("linkIrALogin");
+        const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+        const displayNombre = document.getElementById("displayNombreUsuario");
+        const closeButtons = document.querySelectorAll(".modal-close");
+
+        // Función principal del botón
+        function abrirFlujoCuenta(e) {
+            if (e) e.preventDefault();
+
+            console.log("--> [SISTEMA]: Botón 'Mi Cuenta' presionado.");
+
+            const estaLogueado = localStorage.getItem("sesionActiva") === "true";
+            const nombreUsuario = localStorage.getItem("nombreUsuario");
+
+            if (estaLogueado && nombreUsuario) {
+                console.log("--> [SISTEMA]: Usuario autenticado como: " + nombreUsuario);
+                if (displayNombre) displayNombre.textContent = nombreUsuario;
+                
+                dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+                modalLogin.style.display = "none";
+            } else {
+                console.log("--> [SISTEMA]: No hay sesión activa → Abriendo Login");
+                modalLogin.style.display = "flex";
+                dropdownMenu.style.display = "none";
+            }
+        }
+
+        // Asignar evento al botón
+        if (btnMiCuenta) {
+            btnMiCuenta.addEventListener("click", abrirFlujoCuenta);
+            console.log("✅ Botón Mi Cuenta configurado correctamente");
+        }
+
+        // Cerrar sesión
+        if (btnCerrarSesion) {
+            btnCerrarSesion.addEventListener("click", function(e) {
+                e.preventDefault();
+                localStorage.removeItem("sesionActiva");
+                localStorage.removeItem("nombreUsuario");
+                dropdownMenu.style.display = "none";
+                
+                location.reload();
+            });
+        }
+
+        // Cambiar entre Login y Registro
+        if (linkIrARegistro) {
+            linkIrARegistro.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "flex";
+            });
+        }
+        if (linkIrALogin) {
+            linkIrALogin.addEventListener("click", () => {
+                modalRegistro.style.display = "none";
+                modalLogin.style.display = "flex";
+            });
+        }
+
+        // Cerrar modales con X
+        closeButtons.forEach(btn => {
+            btn.addEventListener("click", () => {
+                modalLogin.style.display = "none";
+                modalRegistro.style.display = "none";
+            });
+        });
+
+        // Cerrar modal al hacer clic fuera
+        window.addEventListener("click", (e) => {
+            if (e.target === modalLogin) modalLogin.style.display = "none";
+            if (e.target === modalRegistro) modalRegistro.style.display = "none";
+            if (!e.target.closest(".nav-user-container")) {
+                dropdownMenu.style.display = "none";
+            }
+        });
+
+        // Funciones de Login y Registro
+        window.procesarLogin = function() {
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", "nombreDelFormulario"); // Cambia según necesites
+            modalLogin.style.display = "none";
+            location.reload();
+        };
+
+        window.procesarRegistro = function() {
+            const nombre = document.getElementById("inputRegNombre").value || "Usuario";
+            localStorage.setItem("sesionActiva", "true");
+            localStorage.setItem("nombreUsuario", nombre);
+            modalRegistro.style.display = "none";
+            alert("¡Registro exitoso! Bienvenido, " + nombre);
+            location.reload();
+        };
+    });
+    </script>
+
+    <script>
+    // Mostrar datos del usuario que inició sesión
+    document.addEventListener("DOMContentLoaded", function() {
+        const nombre = localStorage.getItem("nombreUsuario") || "Padre/Madre";
+        const email = localStorage.getItem("emailUsuario") || "correo@ejemplo.com";
+
+        document.getElementById("nombreUsuario").textContent = nombre;
+        document.getElementById("emailUsuario").textContent = email;
+    });
+    </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const searchInput = document.getElementById("searchInput");
+    const searchButton = document.getElementById("searchButton");
+
+    function realizarBusqueda() {
+        let termino = searchInput.value.trim().toLowerCase();
+
+        if (!termino) {
+            alert("Por favor escribe algo para buscar");
+            return;
+        }
+
+        // Redirecciones según palabras clave
+        if (termino.includes("maternal")) {
+            window.location.href = "maternal.html";
+
+        } else if (termino.includes("pre-kinder") || 
+                   termino.includes("prekinder") || 
+                   termino.includes("pre kinder")) {
+            window.location.href = "prekinder.html";
+
+        } else if (termino.includes("kinder") || termino.includes("kínder")) {
+            window.location.href = "kinder.html";
+
+        } else {
+            // Si no coincide con nada
+            alert("No encontramos resultados para: " + termino + "\n\nPrueba con: maternal, prekinder o kinder");
+        }
+    }
+
+    // Buscar al presionar Enter
+    searchInput.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+            realizarBusqueda();
+        }
+    });
+
+    // Buscar al hacer clic en el botón
+    searchButton.addEventListener("click", realizarBusqueda);
+});
+</script>
+ 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", async function() {
+        // Conectamos a tu proyecto
+        const supabase = window.supabase.createClient(
+            'https://kkedvilrxqqwtaqaxlgw.supabase.co', 
+            'sb_publishable_umIPUKcCOtfXQHxAlP7YCw_ffot99AJ'   
+        );
+
+        // Pedimos ver quién inició sesión
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (session && !error) {
+            // AQUI ESTÁN TUS VARIABLES:
+            const correoReal = session.user.email; 
+            const nombreReal = session.user.user_metadata?.nombre || "";
+            const apellidoReal = session.user.user_metadata?.apellido || "";
+
+            // CONECTAMOS CON TU HTML:
+            // 1. Mandamos el correo a tu <span id="emailUsuario">
+            const spanEmail = document.getElementById("emailUsuario");
+            if (spanEmail) {
+                spanEmail.textContent = correoReal;
+            }
+
+            // 2. Mandamos el nombre a tu <span id="nombreUsuario">
+            const spanNombre = document.getElementById("nombreUsuario");
+            if (spanNombre) {
+                spanNombre.textContent = `${nombreReal} ${apellidoReal}`.trim() || "Usuario";
+            }
+
+        } else {
+            // Si nadie ha iniciado sesión, te regresa al inicio por seguridad
+            window.location.href = "index.html";
+        }
+    });
+    </script>
+
+    <script>
+document.addEventListener("DOMContentLoaded", async function() {
+    // 1. Inicialización de Supabase
+    const supabase = window.supabase.createClient(
+        'https://kkedvilrxqqwtaqaxlgw.supabase.co', 
+        'sb_publishable_umIPUKcCOtfXQHxAlP7YCw_ffot99AJ'   
+    );
+
+    const btnTrigger = document.getElementById('btnMiCuentaTrigger');
+    const dropdownMenu = document.getElementById('dropdownMiniMenu');
+    const modalLogin = document.getElementById('modalLogin');
+    const modalRegistro = document.getElementById('modalRegistro');
+    const displayNombre = document.getElementById('displayNombreUsuario');
+    const btnCerrarSesion = document.getElementById('btnCerrarSesion');
+    const formRegistro = document.getElementById('formRegistro');
+    const formLogin = document.getElementById('formLogin');
+
+    // 2. Función ESTRICTA para controlar la interfaz (Evita menús fantasmas)
+    async function actualizarUI(forzarAbrirMenu = false) {
+        const { data: { session }, error } = await supabase.auth.getSession();
+
+        if (session && !error) {
+            // Usuario REALMENTE logueado en base de datos
+            const nombre = session.user.user_metadata?.nombre || localStorage.getItem("nombreUsuario") || "Usuario";
+            if (displayNombre) displayNombre.textContent = nombre;
+
+            if (forzarAbrirMenu && dropdownMenu) {
+                dropdownMenu.style.display = 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+                if (modalRegistro) modalRegistro.style.display = 'none';
+            }
+        } else {
+            // No hay sesión: Ocultar menú estrictamente y borrar rastros locales
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            localStorage.removeItem("nombreUsuario");
+        }
+    }
+
+    // Al cargar la página, verificar sin mostrar el menú
+    await actualizarUI(false);
+
+    // 3. BOTÓN PRINCIPAL "MI CUENTA" EN EL HEADER
+    if (btnTrigger) {
+        btnTrigger.addEventListener('click', async function(e) {
+            e.preventDefault();
+            const { data: { session } } = await supabase.auth.getSession();
+
+            if (session) {
+                // Si está conectado, mostramos/ocultamos el mini menú
+                const esVisible = dropdownMenu.style.display === 'block';
+                dropdownMenu.style.display = esVisible ? 'none' : 'block';
+                if (modalLogin) modalLogin.style.display = 'none';
+            } else {
+                // Si NO está conectado: abrimos modal login y FORZAMOS ocultar el mini menú
+                if (dropdownMenu) dropdownMenu.style.display = 'none';
+                if (modalLogin) modalLogin.style.display = 'flex'; // o 'block'
+            }
+        });
+    }
+
+    // 4. REGISTRO DE USUARIO
+    if (formRegistro) {
+        formRegistro.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailRegInput').value.trim();
+            const password = document.getElementById('inputRegPassword').value;
+            const nombre = document.getElementById('inputRegNombre').value.trim();
+            const apellido = document.getElementById('inputRegApellido').value.trim();
+
+            const { data: authData, error: authError } = await supabase.auth.signUp({
+                email: email,
+                password: password,
+                options: {
+                    data: { nombre: nombre, apellido: apellido }
+                }
+            });
+
+            if (authError) {
+                alert("Error en registro: " + authError.message);
+                return;
+            }
+
+            // Guardar en tabla 'micuenta'
+            if (authData && authData.user) {
+                const { error: insertError } = await supabase
+                    .from('micuenta')
+                    .insert([
+                        { 
+                            id: authData.user.id, 
+                            nombre: nombre,
+                            apellido: apellido,
+                            correo: email,
+                            contra: password 
+                        }
+                    ]);
+
+                if (insertError) console.error("Error en tabla:", insertError);
+            }
+
+            localStorage.setItem("nombreUsuario", nombre);
+            alert("¡Registro exitoso!");
+            if (modalRegistro) modalRegistro.style.display = "none";
+            formRegistro.reset();
+            
+            // Abre el mini menú automáticamente al terminar
+            await actualizarUI(true);
+        });
+    }
+
+    // 5. INICIO DE SESIÓN (LOGIN)
+    if (formLogin) {
+        formLogin.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('emailInput').value.trim();
+            const password = formLogin.querySelector('input[type="password"]').value;
+
+            const { data, error } = await supabase.auth.signInWithPassword({
+                email: email,
+                password: password
+            });
+
+            if (error) {
+                alert("Error al iniciar sesión: Verifique su correo y contraseña (o si confirmó el correo).");
+            } else {
+            
+                if (modalLogin) modalLogin.style.display = "none";
+                formLogin.reset();
+                
+                // Abre el mini menú automáticamente
+                await actualizarUI(true);
+            }
+        });
+    }
+
+    // 6. CERRAR SESIÓN
+    if (btnCerrarSesion) {
+        btnCerrarSesion.addEventListener('click', async (e) => {
+            e.preventDefault();
+            await supabase.auth.signOut();
+            localStorage.clear(); // Limpieza total del caché
+            if (dropdownMenu) dropdownMenu.style.display = 'none';
+            alert("Has cerrado sesión.");
+            window.location.reload(); 
+        });
+    }
+});
+
+
+
+</script>
+</body>
+</html>
+</body>
+</html>
