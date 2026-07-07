@@ -1192,3 +1192,42 @@ img[alt="Entorno Educativo"] {
 .link-logout:hover {
     background-color: #fff0f0;
 }
+
+/* AJUSTES PARA TELÉFONOS */
+@media (max-width: 600px) {
+    /* 1. Evitar desplazamiento horizontal */
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* 2. Modales: que ocupen casi toda la pantalla */
+    .modal-box {
+        width: 95% !important;
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    /* 3. Menú de navegación (Header) */
+    .main-header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    /* 4. Tablas y Contenedores */
+    .info-container, .content {
+        width: 100% !important;
+        padding: 15px !important;
+        box-sizing: border-box;
+    }
+
+    /* 5. Inputs y Botones: tamaño óptimo para el dedo */
+    input, button {
+        font-size: 16px !important; /* Evita que el iPhone haga zoom al tocar el input */
+        padding: 12px !important;
+    }
+
+    /* 6. Sidebar en cuenta.html */
+    .sidebar {
+        width: 100%
